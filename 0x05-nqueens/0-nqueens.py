@@ -2,7 +2,6 @@
 
 import sys
 
-
 def solve(row, column):
     solver = [[]]
     for q in range(row):
