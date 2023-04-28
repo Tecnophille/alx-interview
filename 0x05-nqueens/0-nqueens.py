@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-'''Solving the N Queens Challenge'''
+'''N Queens Challenge
+Solving the challenge and leaving a complete solution'''
 
 import sys
 
@@ -20,17 +21,17 @@ if __name__ == '__main__':
         exit(1)
 
     solutions = []
-    placed_queens = []  # cordinates format [row, column]
+    placed_queens = []  # coordinates format [row, column]
     stop = False
     r = 0
     c = 0
 
-    # iterate through rows
+    # iterate thru rows
     while r < n:
         goback = False
         # iterate thru columns
         while c < n:
-            # check is curent column is safe
+            # check is current column is safe
             safe = True
             for cord in placed_queens:
                 col = cord[1]
@@ -49,7 +50,7 @@ if __name__ == '__main__':
             # place queen
             cords = [r, c]
             placed_queens.append(cords)
-            # if last row, apend solution and reset all to last unfinshed row
+            # if last row, append solution and reset all to last unfinished row
             # and last safe column in that row
             if r == n - 1:
                 solutions.append(placed_queens[:])
